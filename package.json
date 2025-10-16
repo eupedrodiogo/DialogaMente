@@ -11,7 +11,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "migrate:remove-ghpages": "node scripts/remove-ghpages-config.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
