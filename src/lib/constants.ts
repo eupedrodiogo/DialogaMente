@@ -22,6 +22,46 @@ export const SUPPORT_SUBJECTS = [
   "Outro",
 ] as const;
 
+export const PRICING_PLANS = {
+  free: {
+    name: 'Gratuito',
+    price: 0,
+    period: 'sempre',
+    features: [
+      { text: 'Teste básico de personalidade', available: true },
+      { text: 'Resultado em PDF simples', available: true },
+      { text: 'Histórico limitado', available: false }
+    ]
+  },
+  promo: {
+    name: 'PRO - Lançamento',
+    price: 9.90,
+    period: 'mês',
+    priceId: 'price_1SIrQ53xydtdxuzbp2U7oXUt',
+    badge: 'MAIS POPULAR',
+    description: 'Preço promocional por tempo limitado',
+    features: [
+      { text: 'Tudo do plano gratuito', highlighted: true },
+      { text: 'Relatório PDF Premium (15-20 páginas)' },
+      { text: 'Dashboard de evolução' },
+      { text: 'Histórico ilimitado' },
+      { text: 'Conteúdo exclusivo mensal' }
+    ]
+  },
+  normal: {
+    name: 'PRO - Normal',
+    price: 29.90,
+    period: 'mês',
+    description: 'Preço regular após promoção',
+    comingSoon: true,
+    features: [
+      { text: 'Todos os benefícios PRO' },
+      { text: 'Suporte prioritário' },
+      { text: 'Acesso antecipado a novos recursos' }
+    ]
+  }
+};
+
 export const FAQ_DATA = [
   {
     category: "Conta",
