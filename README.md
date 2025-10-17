@@ -17,15 +17,24 @@
 
 ## ✨ Funcionalidades
 
+### Core Features
 - 🧪 **Teste de Perfil de Comunicação** - 30 questões científicas
 - 📊 **Resultados Detalhados** - Análise completa do perfil
 - 📄 **Relatório em PDF** - Download do resultado
 - ⭐ **Sistema de Avaliações** - Reviews e ratings de usuários
 - 💎 **Planos Premium** - Acesso a conteúdo exclusivo
-- 🎟️ **Sistema de Cupons** - Descontos e promoções
+- 🎫 **Sistema de Cupons** - Descontos e promoções
 - 💬 **Suporte Integrado** - WhatsApp, email e formulário
 - 🌓 **Tema Claro/Escuro** - Interface adaptável
 - 📱 **Design Responsivo** - Mobile-first
+
+### 🎉 Novos Recursos (v2.0.0)
+- 📊 **Dashboard de Analytics** - Métricas em tempo real com gráficos interativos
+- 🏆 **Sistema de Conquistas** - Gamificação com badges e pontos
+- 🔄 **Comparação de Resultados** - Compare-se com outros usuários
+- 📡 **Progressive Web App** - Funciona offline e pode ser instalado
+- ♿ **Menu de Acessibilidade** - Conformidade WCAG 2.2
+- 🔔 **Notificações Push** - Sistema preparado para alerts
 
 ## 🚀 Tecnologias
 
@@ -190,6 +199,7 @@ Para migrar para outra plataforma de hospedagem:
 
 ## 📝 Páginas
 
+### Páginas Principais
 - `/` - Landing page
 - `/instrucoes` - Instruções do teste
 - `/test` - Teste de comunicação
@@ -198,8 +208,16 @@ Para migrar para outra plataforma de hospedagem:
 - `/reviews` - Avaliações de usuários
 - `/suporte` - Suporte ao cliente
 - `/escopo` - Escopo do projeto
+
+### Novas Páginas (v2.0.0)
+- `/analytics` - Dashboard de métricas e estatísticas
+- `/conquistas` - Sistema de conquistas e gamificação
+- `/comparar` - Comparação de resultados com outros usuários
+- `/dashboard` - Painel do usuário
+
+### Administração
 - `/admin/cupons` - Administração de cupons
-- `/sucesso` - Confirmação de pagamento
+- `/payment-success` - Confirmação de pagamento
 
 ## 🎨 Design
 
@@ -246,5 +264,5 @@ Para suporte, entre em contato:
 
 **Desenvolvido com ❤️ por Pedro Diogo**
 
-**Status:** ✅ Em Produção | **Última atualização:** 16 de outubro de 2025
+**Status:** ✅ Em Produção | **Versão:** 2.0.0 | **Última atualização:** 17 de outubro de 2025
 

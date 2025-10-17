@@ -130,3 +130,99 @@ All colors MUST be HSL.
     font-family: 'Playfair Display', serif;
   }
 }
+
+
+/* ========================================
+   Estilos de Acessibilidade
+   ======================================== */
+
+/* Alto Contraste */
+.high-contrast {
+  filter: contrast(1.5);
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.high-contrast a {
+  text-decoration: underline !important;
+}
+
+/* Redução de Movimento */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Foco visível para navegação por teclado */
+*:focus-visible {
+  outline: 3px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: hsl(var(--primary));
+  color: white;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1em;
+}
+
+/* Melhorias de contraste para textos */
+@media (prefers-contrast: high) {
+  :root {
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+  }
+}
+
+/* Respeitar preferência de movimento reduzido do sistema */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Melhorias para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Indicadores visuais para estados interativos */
+button:hover:not(:disabled),
+a:hover {
+  opacity: 0.9;
+}
+
+button:active:not(:disabled),
+a:active {
+  opacity: 0.8;
+}
+
+/* Melhorias de legibilidade */
+p, li, span {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+

@@ -14,8 +14,12 @@ import PaymentSuccess from "./pages/PaymentSuccess";
 import AdminCoupons from "./pages/AdminCoupons";
 import Support from "./pages/Support";
 import Dashboard from "./pages/Dashboard";
+import Analytics from "./pages/Analytics";
+import Achievements from "./pages/Achievements";
+import Compare from "./pages/Compare";
 import NotFound from "./pages/NotFound";
 import { SupportWidget } from "./components/SupportWidget";
+import { AccessibilityMenu } from "./components/AccessibilityMenu";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +30,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <SupportWidget />
+        <AccessibilityMenu />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/scope" element={<Scope />} />
@@ -38,6 +43,9 @@ const App = () => (
           <Route path="/admin-coupons" element={<AdminCoupons />} />
           <Route path="/suporte" element={<Support />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/conquistas" element={<Achievements />} />
+          <Route path="/comparar" element={<Compare />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
