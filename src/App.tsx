@@ -13,6 +13,7 @@ import Pricing from "./pages/Pricing";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import AdminCoupons from "./pages/AdminCoupons";
 import Support from "./pages/Support";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import { SupportWidget } from "./components/SupportWidget";
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/admin-coupons" element={<AdminCoupons />} />
           <Route path="/suporte" element={<Support />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
