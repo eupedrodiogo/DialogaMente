@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard";
 import Analytics from "./pages/Analytics";
 import Achievements from "./pages/Achievements";
 import Compare from "./pages/Compare";
+import TestHistory from "./pages/TestHistory";
 import NotFound from "./pages/NotFound";
 import { SupportWidget } from "./components/SupportWidget";
 import { AccessibilityMenu } from "./components/AccessibilityMenu";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/conquistas" element={<Achievements />} />
           <Route path="/comparar" element={<Compare />} />
+          <Route path="/historico" element={<TestHistory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
