@@ -18,6 +18,8 @@ import Analytics from "./pages/Analytics";
 import Achievements from "./pages/Achievements";
 import Compare from "./pages/Compare";
 import TestHistory from "./pages/TestHistory";
+import AICoach from "./pages/AICoach";
+import MarketInsights from "./pages/MarketInsights";
 import NotFound from "./pages/NotFound";
 import { SupportWidget } from "./components/SupportWidget";
 import { AccessibilityMenu } from "./components/AccessibilityMenu";
@@ -48,6 +50,8 @@ const App = () => (
           <Route path="/conquistas" element={<Achievements />} />
           <Route path="/comparar" element={<Compare />} />
           <Route path="/historico" element={<TestHistory />} />
+          <Route path="/ai-coach" element={<AICoach />} />
+          <Route path="/market-insights" element={<MarketInsights />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
