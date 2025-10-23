@@ -1,6 +1,6 @@
 # ComunicaPro
 
-> Plataforma de análise profissional de perfil comunicativo baseada em ciência
+> Plataforma de análise profissional de **Preferência de Comunicação** (VAK) com foco em insights de memorização e interação interpessoal
 
 [![Deploy Status](https://img.shields.io/badge/deploy-active-success)](https://eupedrodiogo.github.io/comunicapro/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -8,7 +8,7 @@
 
 ## 📋 Sobre o Projeto
 
-**ComunicaPro** é uma aplicação web que oferece testes científicos para identificar o perfil de comunicação dos usuários (Visual, Auditivo ou Cinestésico), fornecendo insights personalizados para desenvolvimento pessoal e profissional.
+**ComunicaPro** é uma aplicação web que utiliza o modelo VAK (Visual, Auditivo ou Cinestésico) reenquadrado como **Preferência de Comunicação e Modalidade de Percepção**. O objetivo é fornecer insights personalizados sobre como o usuário tende a processar informações e se comunicar de forma mais eficaz, alinhado com as mais recentes descobertas da ciência cognitiva sobre memorização e significado. **(Veja o [disclaimer científico completo](src/lib/scientificBasis.ts))**
 
 ### 🌐 URLs
 
@@ -264,5 +264,5 @@ Para suporte, entre em contato:
 
 **Desenvolvido com ❤️ por Pedro Diogo**
 
-**Status:** ✅ Em Produção | **Versão:** 2.0.0 | **Última atualização:** 17 de outubro de 2025
+**Status:** ✅ Em Produção | **Versão:** 2.1.0 | **Última atualização:** 23 de outubro de 2025
 

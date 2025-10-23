@@ -1,5 +1,28 @@
 # Changelog - ComunicaPro
 
+## [2.1.0] - 2025-10-23 - Atualização Diária
+
+### ⚠️ Mudança Crítica na Base Científica
+- **Reenquadramento Teórico:** O modelo VAK (Visual, Auditivo, Cinestésico) foi reenquadrado de 'Estilo de Aprendizagem' para **'Preferência de Comunicação e Modalidade de Percepção'**. Esta mudança alinha o projeto com o consenso da ciência cognitiva, que questiona o VAK como estilo de aprendizagem fixo, focando sua relevância na memorização e comunicação interpessoal.
+- **Documentação Científica:** Adicionado `src/lib/scientificBasis.ts` e atualizado o `README.md` com um disclaimer científico para garantir a credibilidade do projeto.
+
+### ✨ Novos Recursos Avançados
+- **AI Analysis Service:** Implementação da integração com a API da OpenAI (`gpt-4.1-mini`) em `src/services/aiAnalysis.ts` para fornecer:
+    - Análise detalhada do perfil VAK.
+    - Sugestões de Pontos Fortes e Áreas de Melhoria.
+    - Plano de Ação Rápido personalizado.
+    - Funcionalidades futuras para Chatbot e Análise de Sentimento.
+- **Componente de Insights:** Adicionado o componente `src/components/AIInsights.tsx` (simulado) para exibir a análise gerada pela IA na página de resultados.
+
+### 📝 Documentação e Planejamento
+- **Atualização do Plano:** O arquivo `PLANO_ATUALIZACAO.md` foi atualizado para refletir o novo foco em credibilidade científica e a alta prioridade da integração com IA.
+- **Nova Versão:** Projeto atualizado para a versão **2.1.0**.
+
+### 🛠️ Melhorias Técnicas
+- **Dependência:** Adicionada a biblioteca `openai` ao projeto.
+
+---
+
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 ## [2.0.0] - 17 de outubro de 2025

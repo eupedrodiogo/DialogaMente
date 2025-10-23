@@ -9,10 +9,8 @@
 import OpenAI from 'openai';
 
 // Inicializar cliente OpenAI
-const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY || process.env.OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true // Para uso no frontend
-});
+// No ambiente Node.js, a chave é lida automaticamente da variável de ambiente OPENAI_API_KEY.
+const openai = new OpenAI();
 
 /**
  * Interface para resultado de análise com IA
