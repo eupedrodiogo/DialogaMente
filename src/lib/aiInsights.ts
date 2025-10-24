@@ -18,12 +18,55 @@ interface AIInsight {
   recommendations: string[];
   careerSuggestions: string[];
   communicationTips: string[];
+  fecInsight?: string; // Adicionado o novo campo
+}
+
+/**
+ * Calcula o Fator de Engajamento Cognitivo (FEC).
+ * Por enquanto, retorna um valor placeholder. A lógica real será implementada em uma próxima atualização.
+ * @param profile O perfil de comunicação.
+ * @returns Um valor numérico entre 0.0 e 1.0.
+ */
+export function calculateCognitiveEngagementFactor(profile: CommunicationProfile): number {
+    // Lógica placeholder:
+    // Em uma implementação real, este cálculo envolveria:
+    // 1. Análise da distribuição de pontos VAK.
+    // 2. Aplicação de pesos baseados em perguntas de "metacognição" (se houver).
+    // 3. Normalização para um fator de 0 a 1, onde 1.0 é o engajamento máximo.
+    
+    // Exemplo de cálculo simples baseado na dispersão dos resultados:
+    const scores = [profile.visual, profile.auditivo, profile.cinestesico];
+    const maxScore = Math.max(...scores);
+    const minScore = Math.min(...scores);
+    
+    // Quanto maior a diferença entre o máximo e o mínimo, mais "focado" é o engajamento (FEC alto).
+    // Aqui, vamos usar um valor fixo para simular a introdução do recurso.
+    return 0.75; // Valor placeholder
+}
+
+/**
+ * Gera um insight textual baseado no Fator de Engajamento Cognitivo.
+ * @param fec O Fator de Engajamento Cognitivo.
+ * @returns Um texto de insight.
+ */
+export function generateFecInsight(fec: number): string {
+    if (fec >= 0.8) {
+        return "Seu Fator de Engajamento Cognitivo (FEC) é **alto**. Isso sugere que suas preferências de comunicação estão bem definidas e você tem uma alta capacidade de codificar novas informações quando elas são apresentadas na sua modalidade preferida. Continue explorando suas preferências para maximizar sua retenção.";
+    } else if (fec >= 0.6) {
+        return "Seu Fator de Engajamento Cognitivo (FEC) é **moderado**. Embora você tenha preferências claras, a flexibilidade para usar outras modalidades é alta. Isso é excelente para a comunicação em ambientes diversos, mas preste atenção para não se dispersar em ambientes com muitos estímulos.";
+    } else {
+        return "Seu Fator de Engajamento Cognitivo (FEC) é **em desenvolvimento**. Isso pode indicar que você ainda está descobrindo suas preferências ou que se adapta facilmente a diferentes estímulos. O foco deve ser em encontrar o *significado* em qualquer modalidade, e não apenas na forma de apresentação.";
+    }
 }
 
 /**
  * Gera insights personalizados usando IA
  */
 export async function generateAIInsights(profile: CommunicationProfile): Promise<AIInsight> {
+  // 1. Calcula o FEC e gera o insight
+  const fec = calculateCognitiveEngagementFactor(profile);
+  const fecInsight = generateFecInsight(fec);
+
   try {
     const prompt = buildPrompt(profile);
     
@@ -41,10 +84,16 @@ export async function generateAIInsights(profile: CommunicationProfile): Promise
     }
 
     const data = await response.json();
-    return parseAIResponse(data.insights);
+    const insights = parseAIResponse(data.insights);
+    
+    // 2. Adiciona o insight do FEC ao resultado
+    return { ...insights, fecInsight };
   } catch (error) {
     console.error('Erro ao gerar insights com IA:', error);
-    return getFallbackInsights(profile);
+    const fallback = getFallbackInsights(profile);
+    
+    // 3. Adiciona o insight do FEC ao fallback
+    return { ...fallback, fecInsight };
   }
 }
 

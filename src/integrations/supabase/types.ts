@@ -208,6 +208,41 @@ export type Database = {
         }
         Relationships: []
       }
+      test_results: {
+        Row: {
+          created_at: string
+          fator_engajamento_cognitivo: number | null
+          id: string
+          is_premium: boolean
+          result_data: Json
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          fator_engajamento_cognitivo?: number | null
+          id?: string
+          is_premium?: boolean
+          result_data: Json
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          fator_engajamento_cognitivo?: number | null
+          id?: string
+          is_premium?: boolean
+          result_data?: Json
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "test_results_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       test_progress: {
         Row: {
           answers: Json

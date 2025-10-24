@@ -1,9 +1,7 @@
-// DialogaMente/src/lib/scientificBasis.ts
-
 /**
  * @fileoverview Documentação da base científica e teórica do ComunicaPro.
  * O modelo VAK (Visual, Auditivo, Cinestésico) é reenquadrado de 'Estilo de Aprendizagem'
- * para 'Preferência de Comunicação e Modalidade de Percepção', em alinhamento
+ * para 'Preferência de Comunicação e Modalidade de Percepção', em alinhamento com a **Neurociência da Comunicação** e a **Psicologia Cognitiva**
  * com o consenso científico moderno.
  */
 
@@ -12,7 +10,7 @@ export const SCIENTIFIC_BASIS = {
   model: "VAK (Visual, Auditivo, Cinestésico)",
   disclaimer: "O modelo VAK, embora popular, é amplamente questionado pela ciência cognitiva moderna como um 'Estilo de Aprendizagem' fixo. Não há evidências que suportem a ideia de que o aprendizado melhora quando o método de ensino corresponde ao estilo preferido do indivíduo. O ComunicaPro utiliza o VAK não como um estilo de aprendizagem, mas sim como uma ferramenta para identificar **Preferências de Comunicação e Modalidades de Percepção**.",
   reframe: {
-    title: "VAK como Preferência de Comunicação",
+    title: "VAK como Preferência de Comunicação e o Fator de Engajamento Cognitivo (FEC)",
     description: "Nossa aplicação foca na relevância do VAK para a **memorização**, a **comunicação interpessoal** e a **forma como o indivíduo processa e expressa informações**.",
     points: [
       "**Comunicação Interpessoal:** Entender a preferência de comunicação ajuda a adaptar a forma como você se expressa para ser mais eficaz ao interagir com outras pessoas.",
@@ -21,9 +19,9 @@ export const SCIENTIFIC_BASIS = {
     ],
   },
   advancedConcept: {
-    title: "A Importância da Evidência do Significado",
-    source: "Daniel T. Willingham, Ciência Cognitiva",
-    explanation: "O fator mais crucial para o aprendizado e a comunicação eficaz é o **Significado** do conteúdo. O resultado do seu perfil VAK deve ser usado para ajudar você a redefinir o significado do conteúdo, conectando-o com o que já sabe e com suas necessidades, e não como uma limitação sobre como você pode aprender.",
+    title: "A Primazia do Significado e a Neurociência da Comunicação",
+    source: "Daniel T. Willingham (Psicologia Cognitiva) e Neurociência da Comunicação",
+    explanation: "O fator mais crucial para o aprendizado e a comunicação eficaz é o **Significado** do conteúdo. O resultado do seu perfil VAK deve ser usado para ajudar você a redefinir o significado do conteúdo, conectando-o com o que já sabe e com suas necessidades, e não como uma limitação sobre como você pode aprender. Introduzimos o **Fator de Engajamento Cognitivo (FEC)**, uma métrica que será desenvolvida para sugerir a melhor estratégia de codificação (Visual, Auditiva ou Cinestésica) para maximizar a retenção, baseada na sua preferência, mas sempre priorizando o Significado.",
   },
   modalities: [
     {
@@ -43,3 +41,4 @@ export const SCIENTIFIC_BASIS = {
     },
   ],
 };
+
