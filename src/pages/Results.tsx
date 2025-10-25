@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { PAPPActionPlan } from "@/components/PAPPActionPlan";
 import { Download, Printer, ArrowLeft, Share2 } from "lucide-react";
 import { ReviewForm } from "@/components/ReviewForm";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,14 @@ const mockResults = {
   cinestesico: 3,
   primary: "visual" as const,
   percentage: 50
+};
+
+// Mapeamento para o tipo VAKResult do PAPPActionPlan
+const vakResultForPAPP = {
+  visual: mockResults.visual * 10, // Multiplicado por 10 para simular uma pontuação de 0-100
+  auditivo: mockResults.auditivo * 10,
+  cinestesico: mockResults.cinestesico * 10,
+  dominant: mockResults.primary === 'visual' ? 'Visual' : mockResults.primary === 'auditivo' ? 'Auditivo' : 'Cinestesico' as 'Visual' | 'Auditivo' | 'Cinestesico',
 };
 
 const Results = () => {
@@ -269,7 +278,7 @@ const Results = () => {
     }
   };
 
-  const profile = profileDescriptions[mockResults.primary];
+  const profile = profileDescriptions[mockResults.primary as keyof typeof profileDescriptions];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-cyan-50 dark:from-gray-950 dark:via-purple-950 dark:to-cyan-950">
@@ -297,10 +306,11 @@ const Results = () => {
             Visualização de Resultados - Área Administrativa
           </p>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-8">
+      </header>	      {/* Conteúdo Principal */}
+	      <main className="max-w-6xl mx-auto px-6 py-12">
+	        {/* Novo Componente PAPP */}
+	        <PAPPActionPlan vakResult={vakResultForPAPP} />
+	        mt-8">-8">
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-4 justify-center print:hidden">
           <Button

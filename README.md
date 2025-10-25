@@ -28,13 +28,14 @@
 - 🌓 **Tema Claro/Escuro** - Interface adaptável
 - 📱 **Design Responsivo** - Mobile-first
 
-### 🎉 Novos Recursos (v2.0.0)
+### 🎉 Novos Recursos (v2.2.0)
 - 📊 **Dashboard de Analytics** - Métricas em tempo real com gráficos interativos
 - 🏆 **Sistema de Conquistas** - Gamificação com badges e pontos
 - 🔄 **Comparação de Resultados** - Compare-se com outros usuários
 - 📡 **Progressive Web App** - Funciona offline e pode ser instalado
 - ♿ **Menu de Acessibilidade** - Conformidade WCAG 2.2
 - 🔔 **Notificações Push** - Sistema preparado para alerts
+- 🧠 **Plano de Ação de Processamento Profundo (PAPP)** - IA-powered, sugere estratégias ativas de aprendizado alinhadas com a Neurociência Cognitiva (v2.2.0)
 
 ## 🚀 Tecnologias
 
@@ -264,5 +265,5 @@ Para suporte, entre em contato:
 
 **Desenvolvido com ❤️ por Pedro Diogo**
 
-**Status:** ✅ Em Produção | **Versão:** 2.1.0 | **Última atualização:** 23 de outubro de 2025
+**Status:** ✅ Em Produção | **Versão:** 2.2.0 | **Última atualização:** 25 de outubro de 2025
 
