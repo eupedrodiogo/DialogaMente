@@ -7,8 +7,8 @@
 
 export const SCIENTIFIC_BASIS = {
   title: "Base Científica e Reenquadramento Teórico",
-  model: "VAK (Visual, Auditivo, Cinestésico) - Preferência de Comunicação",
-  disclaimer: "O modelo VAK, embora popular, é amplamente questionado pela ciência cognitiva moderna como um 'Estilo de Aprendizagem' fixo. **Estudos de 2025 (Hattie & O'Leary)** confirmam que adaptar o ensino ao estilo preferido do indivíduo não melhora o aprendizado; o que importa é a **qualidade da estratégia de aprendizagem** e não a modalidade sensorial. O ComunicaPro utiliza o VAK não como um estilo de aprendizagem, mas sim como uma ferramenta para identificar **Preferências de Comunicação e Modalidades de Percepção**, que são úteis para a **codificação inicial** da informação, mas não para a retenção a longo prazo."
+  model: "VAK/VARK (Visual, Auditivo, Cinestésico, Leitura/Escrita) - Preferência de Comunicação",
+  disclaimer: "O modelo VAK, embora popular, é amplamente questionado pela ciência cognitiva moderna como um 'Estilo de Aprendizagem' fixo. **Estudos recentes em Neurociência Cognitiva (ex: Hattie & O'Leary, 2025) confirmam que adaptar o ensino ao estilo preferido do indivíduo não melhora o aprendizado; o que importa é a **qualidade da estratégia de aprendizagem** e o **Processamento Profundo**. O ComunicaPro utiliza o VAK/VARK não como um estilo de aprendizagem, mas como uma ferramenta para identificar **Preferências de Comunicação e Modalidades de Percepção**, úteis para a **codificação inicial** da informação e para o engajamento, mas não para a retenção a longo prazo. Incluímos o conceito de VARK (com a modalidade Leitura/Escrita) para maior precisão no contexto digital.o."
   reframe: {
     title: "VAK como Preferência de Comunicação e o Fator de Engajamento Cognitivo (FEC)",
     description: "Nossa aplicação foca na relevância do VAK para a **memorização**, a **comunicação interpessoal** e a **forma como o indivíduo processa e expressa informações**.",
@@ -19,9 +19,10 @@ export const SCIENTIFIC_BASIS = {
     ],
   },
   advancedConcept: {
+    version: "2.2.1",
     title: "A Primazia do Significado e a Neurociência da Comunicação",
     source: "Daniel T. Willingham (Psicologia Cognitiva) e Neurociência da Comunicação (Ref. Hattie & O'Leary, 2025)",
-    explanation: "O fator mais crucial para o aprendizado e a comunicação eficaz é o **Processamento Profundo (Deep Processing)** do conteúdo, que cria conexões significativas com o conhecimento prévio. O resultado do seu perfil VAK deve ser usado como um **ponto de partida** para a codificação inicial da informação. Introduzimos o **Plano de Ação de Processamento Profundo (PAPP)**, um novo recurso que sugere estratégias ativas (ex: auto-explicação, elaboração, prática de recuperação) que se alinham com sua preferência VAK para garantir que você vá além da simples preferência e atinja o nível de **processamento profundo** necessário para a retenção a longo prazo."
+    explanation: "O fator mais crucial para o aprendizado e a comunicação eficaz é o **Processamento Profundo (Deep Processing)** do conteúdo, que cria conexões significativas com o conhecimento prévio. O resultado do seu perfil VAK/VARK deve ser usado como um **ponto de partida** para a codificação inicial da informação. Introduzimos o **Plano de Ação de Processamento Profundo (PAPP)**, um novo recurso, agora **IA-Powered**, que sugere estratégias ativas (ex: auto-explicação, elaboração, prática de recuperação) que se alinham com sua preferência VAK/VARK para garantir que você vá além da simples preferência e atinja o nível de **processamento profundo** necessário para a retenção a longo prazo. O PAPP é gerado por um LLM, atuando como um coach cognitivo."
   },
   modalities: [
     {
