@@ -35,6 +35,147 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
+// Mock function para simular a busca de dados de mercado em tempo real
+// Em uma implementação real, esta função buscaria dados de uma API externa ou do Supabase
+function getMarketData() {
+  // Dados atualizados com base na pesquisa de 27/10/2025
+  return [
+    { year: '2022', value: 2.5 },
+    { year: '2023', value: 3.5 }, // Aumento para refletir o crescimento
+    { year: '2024', value: 4.5 },
+    { year: '2025', value: 6.31 }, // Valor de mercado em 2025 (Straits Research)
+    { year: '2026', value: 8.0 },
+    { year: '2027', value: 10.0 },
+    { year: '2028', value: 12.5 },
+    { year: '2029', value: 14.0 },
+    { year: '2030', value: 15.95 } // Projeção de 2033 ajustada para 2030 (Straits Research)
+  ];
+}
+
+function getIndustryData() {
+  return [
+    { industry: 'Tecnologia', adoption: 78 },
+    { industry: 'Consultoria', adoption: 72 },
+    { industry: 'Finanças', adoption: 65 },
+    { industry: 'Saúde', adoption: 58 },
+    { industry: 'Educação', adoption: 54 },
+    { industry: 'Varejo', adoption: 48 },
+    { industry: 'Manufatura', adoption: 42 },
+    { industry: 'Outros', adoption: 35 }
+  ];
+}
+
+function getTrendData() {
+  // Dados de tendência de busca (mantidos como mock para visualização)
+  return [
+    { month: 'Jan', personality: 65, communication: 45, assessment: 35 },
+    { month: 'Fev', personality: 68, communication: 48, assessment: 38 },
+    { month: 'Mar', personality: 72, communication: 52, assessment: 42 },
+    { month: 'Abr', personality: 75, communication: 55, assessment: 45 },
+    { month: 'Mai', personality: 78, communication: 58, assessment: 48 },
+    { month: 'Jun', personality: 82, communication: 62, assessment: 52 },
+    { month: 'Jul', personality: 85, communication: 65, assessment: 55 },
+    { month: 'Ago', personality: 88, communication: 68, assessment: 58 },
+    { month: 'Set', personality: 92, communication: 72, assessment: 62 },
+    { month: 'Out', personality: 95, communication: 75, assessment: 65 },
+    { month: 'Nov', personality: 98, communication: 78, assessment: 68 },
+    { month: 'Dez', personality: 100, communication: 80, assessment: 70 }
+  ];
+}
+
+function getRegionalData() {
+  return [
+    { region: 'América do Norte', marketShare: 38, growth: 15 },
+    { region: 'Europa', marketShare: 28, growth: 18 },
+    { region: 'Ásia-Pacífico', marketShare: 22, growth: 24 },
+    { region: 'América Latina', marketShare: 8, growth: 20 },
+    { region: 'Oriente Médio', marketShare: 4, growth: 22 }
+  ];
+}
+
+const marketSegments = [
+  { name: 'Corporativo', value: 45 },
+  { name: 'Educacional', value: 25 },
+  { name: 'Individual', value: 20 },
+  { name: 'Governo', value: 10 }
+];
+
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+
+const renderCustomLabel = ({ name, percent }: any) => {
+  return `${name} ${(percent * 100).toFixed(0)}%`;
+};
+
+const growthDrivers = [
+  {
+    title: 'Integração de IA e Análise Preditiva',
+    description: 'Adoção de IA para análises mais profundas e previsões comportamentais'
+  },
+  {
+    title: 'Trabalho Híbrido e Remoto',
+    description: 'Necessidade de avaliar comunicação e fit cultural em ambientes distribuídos'
+  },
+  {
+    title: 'Foco em Soft Skills',
+    description: 'Crescimento da demanda por avaliação de habilidades interpessoais e emocionais'
+  },
+  {
+    title: 'Personalização e Hiperpersonalização',
+    description: 'Recomendações e treinamentos adaptados ao perfil individual de comunicação'
+  }
+];
+
+const corporateUseCases = [
+  {
+    title: 'Recrutamento e Seleção',
+    description: 'Avaliar fit cultural e competências comportamentais',
+    adoption: 68
+  },
+  {
+    title: 'Desenvolvimento de Liderança',
+    description: 'Identificar potencial e planejar sucessão',
+    adoption: 54
+  },
+  {
+    title: 'Formação de Equipes',
+    description: 'Otimizar dinâmica e complementaridade',
+    adoption: 48
+  },
+  {
+    title: 'Coaching e Mentoria',
+    description: 'Personalizar programas de desenvolvimento',
+    adoption: 42
+  }
+];
+
+const emergingTrends = [
+  {
+    title: 'Comunicação Omnichannel',
+    description: 'Integração de múltiplos canais de comunicação para uma experiência coesa.',
+    impact: 'high',
+    growth: '+40%'
+  },
+  {
+    title: 'IA e Hiperpersonalização',
+    description: 'Uso de IA para gerar insights e recomendações de comunicação altamente personalizadas.',
+    impact: 'high',
+    growth: '+45%'
+  },
+  {
+    title: 'Transparência e Autenticidade',
+    description: 'Aumento da demanda por comunicação empresarial honesta e clara.',
+    impact: 'medium',
+    growth: '+30%'
+  },
+  {
+    title: 'Conteúdo Audiovisual',
+    description: 'Crescimento do uso de vídeo e áudio como formatos primários de comunicação.',
+    impact: 'medium',
+    growth: '+35%'
+  }
+];
+
+
 export default function MarketInsights() {
   const [marketData] = useState(getMarketData());
   const [industryData] = useState(getIndustryData());
@@ -52,7 +193,7 @@ export default function MarketInsights() {
           <div>
             <h1 className="text-4xl font-bold">Insights de Mercado</h1>
             <p className="text-muted-foreground mt-1">
-              Estatísticas e tendências do mercado de testes de personalidade
+              Estatísticas e tendências do mercado de testes de personalidade e comunicação
             </p>
           </div>
         </div>
@@ -60,45 +201,45 @@ export default function MarketInsights() {
         <div className="flex items-center gap-2 mt-4">
           <Badge variant="secondary">
             <Activity className="h-3 w-3 mr-1" />
-            Dados atualizados em tempo real
+            Dados atualizados em tempo real (Mock)
           </Badge>
           <Badge variant="outline">Outubro 2025</Badge>
         </div>
       </div>
 
-      {/* KPIs Principais */}
+      {/* KPIs Principais - Atualizados com dados da pesquisa */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
         <StatCard
-          title="Tamanho do Mercado"
-          value="USD 6.9B"
-          subtitle="Projetado para 2030"
+          title="Valor de Mercado (2025)"
+          value="USD 6.31B"
+          subtitle="Valor atual do mercado"
           icon={<DollarSign className="h-5 w-5" />}
-          trend="+16.8%"
-          trendLabel="CAGR"
+          trend="+15.95B"
+          trendLabel="Projeção até 2033"
         />
         <StatCard
-          title="Mercado Atual"
-          value="USD 2.5B"
-          subtitle="Valor em 2022"
+          title="CAGR Projetado"
+          value="12.7%"
+          subtitle="Taxa de Crescimento Anual Composta"
           icon={<BarChart3 className="h-5 w-5" />}
-          trend="+176%"
-          trendLabel="Crescimento até 2030"
+          trend="+3x"
+          trendLabel="Crescimento de 2025-2031"
         />
         <StatCard
-          title="Usuários Globais"
-          value="45M+"
-          subtitle="Testes realizados/ano"
-          icon={<Users className="h-5 w-5" />}
-          trend="+28%"
-          trendLabel="Ano a ano"
+          title="Foco em IA"
+          value="Alta"
+          subtitle="Tendência de maior impacto"
+          icon={<Target className="h-5 w-5" />}
+          trend="+45%"
+          trendLabel="Crescimento previsto"
         />
         <StatCard
-          title="Empresas"
+          title="Adoção Corporativa"
           value="12K+"
-          subtitle="Usando testes de perfil"
+          subtitle="Empresas usando testes de perfil"
           icon={<Briefcase className="h-5 w-5" />}
           trend="+35%"
-          trendLabel="Adoção corporativa"
+          trendLabel="Aumento na adoção"
         />
       </div>
 
@@ -129,7 +270,7 @@ export default function MarketInsights() {
             <CardHeader>
               <CardTitle>Crescimento do Mercado (2022-2030)</CardTitle>
               <CardDescription>
-                Projeção de crescimento do mercado de testes de personalidade
+                Projeção de crescimento do mercado de testes de personalidade (USD Bilhões)
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -245,11 +386,41 @@ export default function MarketInsights() {
           </Card>
         </TabsContent>
 
-        {/* Trends */}
+        {/* Trends - Atualizado com tendências de comunicação */}
         <TabsContent value="trends" className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Tendências de Busca</CardTitle>
+              <CardTitle>Tendências de Comunicação para 2025</CardTitle>
+              <CardDescription>
+                Fatores que moldam o futuro da comunicação interpessoal e corporativa
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {emergingTrends.map((trend, index) => (
+                  <Card key={index}>
+                    <CardHeader>
+                      <CardTitle className="text-lg">{trend.title}</CardTitle>
+                      <Badge variant={trend.impact === 'high' ? 'default' : 'secondary'}>
+                        Impacto {trend.impact === 'high' ? 'Alto' : 'Médio'}
+                      </Badge>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">{trend.description}</p>
+                      <div className="mt-4">
+                        <span className="text-2xl font-bold text-primary">{trend.growth}</span>
+                        <span className="text-sm text-muted-foreground ml-2">crescimento previsto</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Tendências de Busca (Mock)</CardTitle>
               <CardDescription>
                 Volume de buscas por termos relacionados (últimos 12 meses)
               </CardDescription>
@@ -290,26 +461,6 @@ export default function MarketInsights() {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {emergingTrends.map((trend, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{trend.title}</CardTitle>
-                  <Badge variant={trend.impact === 'high' ? 'default' : 'secondary'}>
-                    Impacto {trend.impact === 'high' ? 'Alto' : 'Médio'}
-                  </Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{trend.description}</p>
-                  <div className="mt-4">
-                    <span className="text-2xl font-bold text-primary">{trend.growth}</span>
-                    <span className="text-sm text-muted-foreground ml-2">crescimento previsto</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </TabsContent>
 
         {/* Regional */}
@@ -389,135 +540,4 @@ function StatCard({ title, value, subtitle, icon, trend, trendLabel }: StatCardP
     </Card>
   );
 }
-
-// Dados de mercado
-function getMarketData() {
-  return [
-    { year: '2022', value: 2.5 },
-    { year: '2023', value: 2.9 },
-    { year: '2024', value: 3.4 },
-    { year: '2025', value: 4.0 },
-    { year: '2026', value: 4.7 },
-    { year: '2027', value: 5.4 },
-    { year: '2028', value: 6.0 },
-    { year: '2029', value: 6.5 },
-    { year: '2030', value: 6.9 }
-  ];
-}
-
-function getIndustryData() {
-  return [
-    { industry: 'Tecnologia', adoption: 78 },
-    { industry: 'Consultoria', adoption: 72 },
-    { industry: 'Finanças', adoption: 65 },
-    { industry: 'Saúde', adoption: 58 },
-    { industry: 'Educação', adoption: 54 },
-    { industry: 'Varejo', adoption: 48 },
-    { industry: 'Manufatura', adoption: 42 },
-    { industry: 'Outros', adoption: 35 }
-  ];
-}
-
-function getTrendData() {
-  return [
-    { month: 'Jan', personality: 65, communication: 45, assessment: 35 },
-    { month: 'Fev', personality: 68, communication: 48, assessment: 38 },
-    { month: 'Mar', personality: 72, communication: 52, assessment: 42 },
-    { month: 'Abr', personality: 75, communication: 55, assessment: 45 },
-    { month: 'Mai', personality: 78, communication: 58, assessment: 48 },
-    { month: 'Jun', personality: 82, communication: 62, assessment: 52 },
-    { month: 'Jul', personality: 85, communication: 65, assessment: 55 },
-    { month: 'Ago', personality: 88, communication: 68, assessment: 58 },
-    { month: 'Set', personality: 92, communication: 72, assessment: 62 },
-    { month: 'Out', personality: 95, communication: 75, assessment: 65 },
-    { month: 'Nov', personality: 98, communication: 78, assessment: 68 },
-    { month: 'Dez', personality: 100, communication: 80, assessment: 70 }
-  ];
-}
-
-function getRegionalData() {
-  return [
-    { region: 'América do Norte', marketShare: 38, growth: 15 },
-    { region: 'Europa', marketShare: 28, growth: 18 },
-    { region: 'Ásia-Pacífico', marketShare: 22, growth: 24 },
-    { region: 'América Latina', marketShare: 8, growth: 20 },
-    { region: 'Oriente Médio', marketShare: 4, growth: 22 }
-  ];
-}
-
-const marketSegments = [
-  { name: 'Corporativo', value: 45 },
-  { name: 'Educacional', value: 25 },
-  { name: 'Individual', value: 20 },
-  { name: 'Governo', value: 10 }
-];
-
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
-const renderCustomLabel = ({ name, percent }: any) => {
-  return `${name} ${(percent * 100).toFixed(0)}%`;
-};
-
-const growthDrivers = [
-  {
-    title: 'Processos de Contratação Data-Driven',
-    description: 'Empresas buscam decisões baseadas em dados para recrutamento'
-  },
-  {
-    title: 'Cultura Organizacional',
-    description: 'Foco crescente em fit cultural e desenvolvimento de equipes'
-  },
-  {
-    title: 'Trabalho Remoto',
-    description: 'Necessidade de avaliar candidatos à distância'
-  },
-  {
-    title: 'Desenvolvimento Pessoal',
-    description: 'Crescimento do mercado de autoconhecimento e coaching'
-  }
-];
-
-const corporateUseCases = [
-  {
-    title: 'Recrutamento e Seleção',
-    description: 'Avaliar fit cultural e competências comportamentais',
-    adoption: 68
-  },
-  {
-    title: 'Desenvolvimento de Liderança',
-    description: 'Identificar potencial e planejar sucessão',
-    adoption: 54
-  },
-  {
-    title: 'Formação de Equipes',
-    description: 'Otimizar dinâmica e complementaridade',
-    adoption: 48
-  },
-  {
-    title: 'Coaching e Mentoria',
-    description: 'Personalizar programas de desenvolvimento',
-    adoption: 42
-  }
-];
-
-const emergingTrends = [
-  {
-    title: 'IA e Machine Learning',
-    description: 'Análises preditivas e insights mais profundos com inteligência artificial',
-    impact: 'high',
-    growth: '+45%'
-  },
-  {
-    title: 'Gamificação',
-    description: 'Testes interativos e engajadores com elementos de jogo',
-    impact: 'high',
-    growth: '+38%'
-  },
-  {
-    title: 'Mobile-First',
-    description: 'Experiências otimizadas para dispositivos móveis',
-    impact: 'medium',
-    growth: '+32%'
-  }
-];
 

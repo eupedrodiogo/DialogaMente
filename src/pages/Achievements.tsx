@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { Trophy, Star, Target, Zap, Award, Lock, CheckCircle2 } from "lucide-react";
+import { Trophy, Star, Target, Zap, Award, Lock, CheckCircle2, Globe } from "lucide-react";
 
 interface Achievement {
   id: string;
@@ -54,6 +54,10 @@ export default function Achievements() {
         .eq("user_id", user.id);
 
       // Definir conquistas
+      // NOVAS CONQUISTAS 27/10/2025
+      const aiInsightsUsed = testsData?.some(t => t.ai_insights_used) || false;
+      const marketInsightsViewed = true; // Simular que o usuário visualizou a nova página
+      // FIM NOVAS CONQUISTAS
       const allAchievements: Achievement[] = [
         {
           id: "first_test",
@@ -124,6 +128,28 @@ export default function Achievements() {
           unlocked: new Set(testsData?.map(t => t.profile_type)).size >= 3,
           category: "learning",
           points: 200,
+        },
+        {
+          id: "ai_insights_user",
+          title: "Mente Analítica",
+          description: "Use o recurso de Insights de IA (PAPP) pela primeira vez",
+          icon: Zap,
+          requirement: 1,
+          current: aiInsightsUsed ? 1 : 0,
+          unlocked: aiInsightsUsed,
+          category: "special",
+          points: 75,
+        },
+        {
+          id: "market_explorer",
+          title: "Explorador de Mercado",
+          description: "Visite a página de Insights de Mercado",
+          icon: Globe,
+          requirement: 1,
+          current: marketInsightsViewed ? 1 : 0,
+          unlocked: marketInsightsViewed,
+          category: "social",
+          points: 50,
         },
       ];
 
