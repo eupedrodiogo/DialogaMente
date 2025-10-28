@@ -265,5 +265,5 @@ Para suporte, entre em contato:
 
 **Desenvolvido com ❤️ por Pedro Diogo**
 
-**Status:** ✅ Em Produção | **Versão:** 2.2.1 | **Última atualização:** 26 de outubro de 2025
+**Status:** ✅ Em Produção | **Versão:** 2.2.2 | **Última atualização:** 28 de outubro de 2025
 

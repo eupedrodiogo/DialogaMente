@@ -14,7 +14,8 @@
     "deploy": "gh-pages -d dist",
     "deploy:vercel": "vercel --prod",
     "deploy:netlify": "netlify deploy --prod",
-    "migrate:remove-ghpages": "node scripts/remove-ghpages-config.js"
+    "migrate:remove-ghpages": "node scripts/remove-ghpages-config.js",
+    "migrate": "node scripts/migrate_papp_data.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
