@@ -1,5 +1,40 @@
 # Changelog - ComunicaPro
 
+## [2.2.3] - 2025-10-29 - Atualização Diária
+
+### ✨ Novo Recurso Avançado: Análise de Sentimento com IA
+- **Módulo de Análise de Sentimento:** Implementado o novo recurso `SentimentAnalysis` que utiliza a API da OpenAI (`gpt-4.1-mini`) para realizar análise profunda de sentimento em textos.
+    - **Funcionalidade:** Analisa o texto fornecido pelo usuário, retornando classificação de sentimento (Positivo, Neutro, Negativo), pontuação, intensidade, tom, palavras-chave e insights detalhados.
+    - **Alinhamento com Tendência:** Este recurso se alinha com a tendência de **Inteligência Artificial Conversacional** e **Personalização Avançada** em 2025, permitindo que os usuários avaliem a eficácia emocional de suas comunicações.
+- **Componente de Interface:** Adicionado o componente `src/components/SentimentAnalysis.tsx` para uma interface amigável para o novo recurso.
+- **Script Auxiliar:** Criado o script Python `scripts/sentiment_analysis.py` para testes e uso via linha de comando, demonstrando a integração com a API.
+
+### 📝 Documentação e Dados
+- **Relatório de Pesquisa Diária:** Adicionado o arquivo `research_findings_daily_update.md` com as tendências e dados de engajamento de mídias sociais para 2025, justificando a nova implementação.
+- **Atualização da Versão:** Projeto atualizado para a versão **2.2.3**.
+
+### 🛠️ Melhorias Técnicas
+- **Estrutura de Scripts:** O novo script Python foi adicionado à pasta `scripts/`.
+
+---
+
+## [2.2.2] - 2025-10-28 - Atualização Diária
+
+### 🧠 Plano de Ação de Processamento Profundo (PAPP)
+- **Melhoria no PAPP:** O PAPP (Plano de Ação de Processamento Profundo) foi aprimorado para oferecer sugestões de estratégias ativas de aprendizado ainda mais alinhadas com a Neurociência Cognitiva e o Processamento Profundo.
+- **Correção de Bug:** Resolvido um problema de formatação no relatório em PDF do PAPP.
+- **Atualização da Versão:** Projeto atualizado para a versão **2.2.2**.
+
+---
+
+## [2.2.1] - 2025-10-27 - Atualização Diária
+
+### 🧠 Plano de Ação de Processamento Profundo (PAPP)
+- **Lançamento do PAPP:** Implementação do recurso **IA-Powered** "Plano de Ação de Processamento Profundo (PAPP)", utilizando LLM para sugerir estratégias ativas de aprendizado.
+- **Atualização da Versão:** Projeto atualizado para a versão **2.2.1**.
+
+---
+
 ## [2.1.0] - 2025-10-23 - Atualização Diária
 
 ### ⚠️ Mudança Crítica na Base Científica
@@ -206,4 +241,3 @@ Esta atualização foi desenvolvida com base nas melhores práticas de 2025 para
 - Sistema de cupons
 - Suporte integrado
 - Tema claro/escuro
-
