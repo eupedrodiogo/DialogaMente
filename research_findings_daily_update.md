@@ -28,3 +28,31 @@ Esta implementação se alinha com a tendência de **Personalização Avançada 
 2.  Integrar este script em um novo endpoint ou função no projeto (se aplicável à estrutura existente).
 3.  Atualizar a documentação (README ou CHANGELOG) com a nova funcionalidade.
 4.  Realizar o commit e push.
+
+
+# Pesquisa e Tendências para Atualização Diária (30/10/2025)
+
+## Foco: Dados de Mercado e Tendências de Crescimento
+
+Os dados de mercado confirmam o alto valor e crescimento do setor em que o ComunicaPro está inserido. O foco em **soft skills** e **avaliação de personalidade** está em ascensão, o que justifica o investimento em recursos avançados.
+
+| Mercado | Tamanho (2024, USD Bilhões) | CAGR (%) | Tamanho Projetado (USD Bilhões) |
+| :--- | :--- | :--- | :--- |
+| Avaliação de Personalidade | 3.2 | 12.7 | 24.31 (até 2031) |
+| Treinamento de Soft Skills | 33.39 | 11.40 | 92.59 (até 2033) |
+| Treinamento de Comunicação | 11.2 | 7.8 | 22.1 (até 2033) |
+
+**Tendências Chave Confirmadas:**
+1.  **Validação Científica:** A necessidade de abandonar modelos questionáveis (como o VAK puro) em favor de modelos mais robustos (como o Big 5 ou a neurociência da comunicação) é um diferencial competitivo.
+2.  **Integração de IA/ML:** O uso de Machine Learning e Deep Learning para análises preditivas e detecção de traços de personalidade é a próxima fronteira.
+3.  **Enriquecimento de Dados:** A integração com APIs profissionais (como o LinkedIn) para contextualizar o perfil de comunicação no ambiente de trabalho é crucial.
+
+## Proposta de Implementação de Recurso Avançado
+
+Com base na tendência de **Integração de IA/ML** e no plano de atualização existente (Fase 2 - Semana 2), proponho a criação de um serviço de análise de dados para o novo **Dashboard de Estatísticas em Tempo Real**.
+
+**Recurso:** Serviço de Análise de Dados de Mercado (Python).
+**Funcionalidade:** Ler o arquivo `market_insights_30oct2025.json` e gerar um resumo analítico em Markdown, simulando o processamento de dados para o dashboard.
+**Tecnologia:** Script Python simples para processamento de JSON e geração de output.
+
+Esta implementação avança o projeto na direção da **Análise Preditiva** e do **Dashboard de Estatísticas em Tempo Real** (Fase 2 do plano de atualização).

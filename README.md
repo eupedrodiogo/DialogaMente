@@ -35,7 +35,7 @@
 - 📡 **Progressive Web App** - Funciona offline e pode ser instalado
 - ♿ **Menu de Acessibilidade** - Conformidade WCAG 2.2
 - 🔔 **Notificações Push** - Sistema preparado para alerts
-- 🧠 **Plano de Ação de Processamento Profundo (PAPP)** - **IA-Powered** com LLM, sugere estratégias ativas de aprendizado alinhadas com a Neurociência Cognitiva e o Processamento Profundo (v2.2.1)\n- 💬 **Análise de Sentimento com IA** - Novo recurso avançado que utiliza LLM para analisar o tom e o sentimento de textos de comunicação (v2.2.3)
+- 🧠 **Plano de Ação de Processamento Profundo (PAPP)** - **IA-Powered** com LLM, sugere estratégias ativas de aprendizado alinhadas com a Neurociência Cognitiva e o Processamento Profundo (v2.2.3)\n- 💬 **Análise de Sentimento com IA** - Novo recurso avançado que utiliza LLM para analisar o tom e o sentimento de textos de comunicação (v2.2.3)
 
 ## 🚀 Tecnologias
 

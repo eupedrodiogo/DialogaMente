@@ -1,0 +1,37 @@
+{
+    "date": "2025-10-30",
+    "market_insights": {
+        "personality_assessment": {
+            "title": "Mercado Global de Soluções de Avaliação de Personalidade",
+            "size_2024_billion_usd": 3.2,
+            "size_2031_billion_usd": 24.31,
+            "cagr_percent": 12.7,
+            "source": "The Insight Partners / AssessFirst"
+        },
+        "soft_skills_training": {
+            "title": "Mercado Global de Treinamento de Soft Skills",
+            "size_2024_billion_usd": 33.39,
+            "size_2033_billion_usd": 92.59,
+            "cagr_percent": 11.40,
+            "source": "IMARC Group"
+        },
+        "communication_skills_training": {
+            "title": "Mercado Global de Treinamento de Habilidades de Comunicação",
+            "size_2024_billion_usd": 11.2,
+            "size_2033_billion_usd": 22.1,
+            "cagr_percent_percent": 7.8,
+            "source": "Data Intelo"
+        }
+    },
+    "trends": [
+        "Adoção crescente de sistemas de avaliação de personalidade inteligentes e baseados em IA.",
+        "Foco em modelos cientificamente validados (ex: Big 5) em detrimento de modelos questionáveis (ex: VAK/VARK).",
+        "Alta demanda por treinamento em soft skills, especialmente comunicação e liderança.",
+        "Uso de Machine Learning e Deep Learning para detecção de traços de personalidade e habilidades de comunicação."
+    ],
+    "advanced_feature_focus": [
+        "Integração de IA para análises textuais e insights personalizados.",
+        "Desenvolvimento de sistemas de análise preditiva (ML) para padrões de comunicação.",
+        "Uso de APIs como LinkedIn para enriquecimento de perfil e benchmarking setorial."
+    ]
+}
