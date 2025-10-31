@@ -1,3 +1,10 @@
 {
-    "error": "JSON Decode Error"
+    "status": "placeholder",
+    "message": "Este arquivo será atualizado diariamente com o Plano de Ação de Processamento Profundo (PAPP) gerado pela IA, com base nas últimas tendências e dados de mercado.",
+    "last_generation_date": "2025-10-31",
+    "papp_data": {
+        "visual": "Estratégia Visual de Processamento Profundo: Crie mapas mentais detalhados e visualize cenários complexos. Use a técnica de 'Palácio da Memória' para fixar conceitos.",
+        "auditivo": "Estratégia Auditiva de Processamento Profundo: Grave-se explicando o conteúdo e ouça ativamente. Participe de debates e use rimas ou canções para memorizar informações-chave.",
+        "cinestesico": "Estratégia Cinestésica de Processamento Profundo: Faça anotações à mão, use gestos para explicar conceitos e aplique o aprendizado em projetos práticos e simulações."
+    }
 }

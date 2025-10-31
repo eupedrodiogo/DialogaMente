@@ -1,0 +1,22 @@
+{
+  "last_updated": "2025-10-31",
+  "data_source": "Multiple Market Research Reports (Mordor Intelligence, Future Market Insights, The Insight Partners)",
+  "market_statistics": {
+    "personality_assessment_solutions": {
+      "market_size_2025_usd_billion": 9.98,
+      "market_size_2030_projected_usd_billion": 17.99,
+      "cagr_2025_2030_percent": 12.4,
+      "cagr_source": "Future Market Insights",
+      "size_source": "Mordor Intelligence"
+    },
+    "online_psychological_testing": {
+      "market_size_2024_usd_billion": 2.3,
+      "market_size_2033_projected_usd_billion": 5.1,
+      "cagr_2024_2033_percent": 10.2
+    }
+  },
+  "key_trends": [
+    "Crescimento impulsionado por avanços em infraestrutura digital e IA.",
+    "Adoção crescente em recrutamento e desenvolvimento de talentos no mercado de trabalho."
+  ]
+}
