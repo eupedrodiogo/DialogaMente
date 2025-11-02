@@ -5,6 +5,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Users, TrendingUp, Award, Activity } from "lucide-react";
+import MarketDataCard from "@/components/MarketDataCard";
+import PredictionCard from "@/components/PredictionCard";
 
 interface AnalyticsData {
   totalUsers: number;
@@ -148,6 +150,7 @@ export default function Analytics() {
 
       {/* Cards de Métricas */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+        {/* Cards de Métricas */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total de Usuários</CardTitle>
@@ -181,21 +184,31 @@ export default function Analytics() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Taxa de Conversão</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">
-              {data.totalUsers > 0 
-                ? Math.round((data.totalTests / data.totalUsers) * 100) 
-                : 0}%
-            </div>
-            <p className="text-xs text-muted-foreground">Usuários que completaram teste</p>
-          </CardContent>
-        </Card>
-      </div>
+<Card>
+	          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+	            <CardTitle className="text-sm font-medium">Taxa de Conversão</CardTitle>
+	            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+	          </CardHeader>
+	          <CardContent>
+	            <div className="text-2xl font-bold">
+	              {data.totalUsers > 0 
+	                ? Math.round((data.totalTests / data.totalUsers) * 100) 
+	                : 0}%
+	            </div>
+	            <p className="text-xs text-muted-foreground">Usuários que completaram teste</p>
+	          </CardContent>
+	        </Card>
+	      </div>
+
+	      {/* Card de Dados de Mercado */}
+	      <div className="grid gap-4 mb-8">
+	        <MarketDataCard />
+	      </div>
+
+	      {/* Card de Previsões de ML */}
+	      <div className="grid gap-4 mb-8">
+	        <PredictionCard />
+	      </div>
 
       {/* Gráficos */}
       <Tabs defaultValue="distribution" className="space-y-4">

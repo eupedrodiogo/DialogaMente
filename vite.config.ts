@@ -7,8 +7,16 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base: '/comunicapro/',
   server: {
-    host: "::",
-    port: 8080,
+    host: "0.0.0.0",
+    port: 8082,
+    strictPort: true,
+    hmr: {
+      clientPort: 8082
+    },
+    watch: {
+      usePolling: true,
+    },
+    allowedHosts: ["8082-idl79yiwptn39u77suxmi-f34ccf29.manusvm.computer"],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
