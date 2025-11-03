@@ -35,7 +35,7 @@
 - 📡 **Progressive Web App** - Funciona offline e pode ser instalado
 - ♿ **Menu de Acessibilidade** - Conformidade WCAG 2.2
 - 🔔 **Notificações Push** - Sistema preparado para alerts
-- 🧠 **Plano de Ação de Processamento Profundo (PAPP)** - **IA-Powered** com LLM, sugere estratégias ativas de aprendizado alinhadas com a Neurociência Cognitiva e o Processamento Profundo (v2.2.3)\n- 💬 **Análise de Sentimento com IA** - Novo recurso avançado que utiliza LLM para analisar o tom e o sentimento de textos de comunicação (v2.2.3)
+- 🧠 **Plano de Ação de Processamento Profundo (PAPP)** - **IA-Powered** com LLM, sugere estratégias ativas de aprendizado alinhadas com a Neurociência Cognitiva e o Processamento Profundo (v2.2.3)\n- 💬 **Análise de Sentimento com IA** - Novo recurso avançado que utiliza LLM para analisar o tom e o sentimento de textos de comunicação (v2.2.3)\n- ✨ **Sistema de Recomendações Inteligentes** - Sugestões personalizadas de cursos, artigos e exercícios baseadas no perfil de comunicação e tendências de mercado (v2.2.4)
 
 ## 🚀 Tecnologias
 
@@ -214,7 +214,7 @@ Para migrar para outra plataforma de hospedagem:
 - `/analytics` - Dashboard de métricas e estatísticas
 - `/conquistas` - Sistema de conquistas e gamificação
 - `/comparar` - Comparação de resultados com outros usuários
-- `/dashboard` - Painel do usuário
+- `/dashboard` - Painel do usuário\n- `/recomendacoes` - Recomendações personalizadas
 
 ### Administração
 - `/admin/cupons` - Administração de cupons
@@ -265,5 +265,5 @@ Para suporte, entre em contato:
 
 **Desenvolvido com ❤️ por Pedro Diogo**
 
-**Status:** ✅ Em Produção | **Versão:** 2.2.3 | **Última atualização:** 31 de outubro de 2025
+**Status:** ✅ Em Produção | **Versão:** 2.2.4 | **Última atualização:** 03 de novembro de 2025
 

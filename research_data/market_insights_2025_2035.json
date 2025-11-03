@@ -1,0 +1,49 @@
+{
+  "last_updated": "2025-11-03",
+  "market_segment": "Personality Assessment Solution Market",
+  "data_sources": [
+    {
+      "source": "Future Market Insights",
+      "url": "https://www.futuremarketinsights.com/reports/personality-assessment-solution-market",
+      "details": {
+        "year_2025_value": "USD 11.6 Billion",
+        "year_2035_projection": "USD 37.7 Billion",
+        "cagr_2025_2035": "12.4%"
+      }
+    },
+    {
+      "source": "The Insight Partners (via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/news/personality-assessment-solution-market-reach-104600469.html",
+      "details": {
+        "year_2031_projection": "US$24.31 Billion",
+        "cagr": "12.7%"
+      }
+    },
+    {
+      "source": "Straits Research",
+      "url": "https://straitsresearch.com/report/personality-assessment-solution-market",
+      "details": {
+        "year_2025_value": "USD 6.31 Billion",
+        "year_2033_projection": "USD 15.95 Billion",
+        "cagr": "Não especificado"
+      }
+    },
+    {
+      "source": "MetaStat Insight (Psychometric Tests Market)",
+      "url": "https://www.metastatinsight.com/report/psychometric-tests-market",
+      "details": {
+        "year_2023_value": "USD 663.9 Million",
+        "year_2030_projection": "USD 1101.3 Million",
+        "cagr": "7.5%"
+      }
+    }
+  ],
+  "communication_trends_2025": [
+    "Comunicação Omnichannel",
+    "Audiovisual onipresente",
+    "Inteligência Artificial (IA) e otimização de conteúdo",
+    "Análise de dados e personalização de campanhas",
+    "Transparência e clareza",
+    "Autenticidade como meta e como diferencial"
+  ]
+}

@@ -1,4 +1,4 @@
-# Changelog - 31 de Outubro de 2025
+# ComunicaPro Changelog\n\n## Versão 2.2.4 - 03 de Novembro de 2025\n\n- **Novo Recurso:** Implementação inicial do **Sistema de Recomendações Inteligentes** (`/recomendacoes`), oferecendo sugestões personalizadas de cursos, artigos e exercícios baseadas no perfil de comunicação do usuário e nas tendências de mercado.\n- **Atualização de Dados:** Inclusão de dados de mercado atualizados (2025-2035) sobre o crescimento do setor de avaliação de personalidade.\n- **Documentação:** Atualização do `README.md` e `PLANO_ATUALIZACAO.md` para a versão 2.2.4.\n\n# Changelog - 31 de Outubro de 2025
 
 ## 🚀 Versão: 2.2.3 (Atualização Diária)
 
