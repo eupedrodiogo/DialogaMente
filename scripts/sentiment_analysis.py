@@ -59,14 +59,14 @@ Forneça uma resposta em JSON com a seguinte estrutura:
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
-                    {{
+                    {
                         "role": "system",
                         "content": "Você é um especialista em análise de sentimento e processamento de linguagem natural. Sempre responda em JSON válido."
-                    }},
-                    {{
+                    },
+                    {
                         "role": "user",
                         "content": prompt
-                    }}
+                    }
                 ],
                 temperature=0.3,
                 max_tokens=500
@@ -83,17 +83,17 @@ Forneça uma resposta em JSON com a seguinte estrutura:
             return result
             
         except json.JSONDecodeError:
-            return {{
+            return {
                 "error": "Falha ao processar resposta JSON",
                 "sentiment": "unknown",
                 "timestamp": datetime.now().isoformat()
-            }}
+            }
         except Exception as e:
-            return {{
+            return {
                 "error": str(e),
                 "sentiment": "unknown",
                 "timestamp": datetime.now().isoformat()
-            }}
+            }
     
     def batch_analyze(self, texts: List[str]) -> List[Dict]:
         """
@@ -121,7 +121,7 @@ Forneça uma resposta em JSON com a seguinte estrutura:
             Dict com estatísticas agregadas
         """
         if not results:
-            return {{}}
+            return {}
         
         sentiments = [r.get("sentiment") for r in results if "sentiment" in r]
         scores = [r.get("score", 0) for r in results if "score" in r]
@@ -130,7 +130,7 @@ Forneça uma resposta em JSON com a seguinte estrutura:
         neutral_count = sentiments.count("neutral")
         negative_count = sentiments.count("negative")
         
-        return {{
+        return {
             "total_analyzed": len(results),
             "positive_count": positive_count,
             "neutral_count": neutral_count,
@@ -138,7 +138,7 @@ Forneça uma resposta em JSON com a seguinte estrutura:
             "positive_percentage": (positive_count / len(results) * 100) if results else 0,
             "average_score": sum(scores) / len(scores) if scores else 0,
             "timestamp": datetime.now().isoformat()
-        }}
+        }
 
 
 def main():

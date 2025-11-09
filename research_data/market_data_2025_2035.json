@@ -1,0 +1,33 @@
+{
+  "last_updated": "2025-11-09",
+  "market_data": {
+    "personality_assessment_solution": {
+      "title": "Mercado Global de Soluções de Avaliação de Personalidade",
+      "value_2025_billion_usd": 11.6,
+      "value_2035_billion_usd": 37.7,
+      "cagr_2025_2035_percent": 12.4,
+      "source": "Future Market Insights (Outubro 2025)"
+    },
+    "soft_skills_training": {
+      "title": "Mercado Global de Treinamento de Soft Skills",
+      "value_2024_billion_usd": 33.39,
+      "value_2033_billion_usd": 92.59,
+      "cagr_2025_2033_percent": 11.40,
+      "source": "IMARC Group (2024)"
+    },
+    "communication_skills_training": {
+      "title": "Mercado Global de Treinamento de Habilidades de Comunicação",
+      "value_2024_billion_usd": 4.5,
+      "value_2033_billion_usd": 9.2,
+      "cagr_2024_2033_percent": 8.0,
+      "source": "MarketIntelo (2024)"
+    },
+    "ai_trends": [
+      "Experiências hiper-personalizadas",
+      "Voz AI e tradução em tempo real",
+      "Análise de Sentimento",
+      "Comunicação de crise alimentada por IA",
+      "Análise de padrões de comunicação para dinâmica de equipe"
+    ]
+  }
+}
