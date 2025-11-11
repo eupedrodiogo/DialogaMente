@@ -1,0 +1,33 @@
+{
+  "date": "2025-11-11",
+  "source": "Simulação de Dados de Mercado e Comportamento",
+  "trends": [
+    {
+      "trend_id": "T001",
+      "name": "Aumento na Preferência Cinestésica em Comunicação Digital",
+      "vak_type": "Cinestésico",
+      "metric": "Engajamento em Conteúdo Interativo",
+      "value": 0.05,
+      "unit": "aumento percentual",
+      "description": "Observado um crescimento de 5% no engajamento com conteúdo que exige interação física ou motora (ex: quizzes, simulações, realidade aumentada) em plataformas de comunicação profissional."
+    },
+    {
+      "trend_id": "T002",
+      "name": "Demanda por Relatórios Visuais de Desempenho",
+      "vak_type": "Visual",
+      "metric": "Buscas por 'Dashboard de Comunicação'",
+      "value": 0.02,
+      "unit": "aumento percentual",
+      "description": "Pequeno aumento na busca por ferramentas que transformam dados de comunicação em gráficos e visualizações, indicando uma preferência por relatórios visuais claros."
+    },
+    {
+      "trend_id": "T003",
+      "name": "Eficácia de Podcasts e Áudio-aulas",
+      "vak_type": "Auditivo",
+      "metric": "Taxa de Conclusão de Áudio-aulas",
+      "value": 0.85,
+      "unit": "taxa de conclusão",
+      "description": "A taxa de conclusão de módulos de treinamento baseados em áudio permanece alta (85%), reforçando a eficácia da modalidade auditiva para aprendizado contínuo."
+    }
+  ]
+}

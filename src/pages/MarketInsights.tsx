@@ -4,7 +4,11 @@
  */
 
 import { useState, useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { getDailySummary } from '@/lib/dailyTrends'; // Vamos criar esta função
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -177,6 +181,11 @@ const emergingTrends = [
 
 
 export default function MarketInsights() {
+  const { data: dailySummary, isLoading: isSummaryLoading, isError: isSummaryError } = useQuery({
+    queryKey: ['dailySummary'],
+    queryFn: getDailySummary,
+    staleTime: 1000 * 60 * 60 * 24, // 24 horas
+  });
   const [marketData] = useState(getMarketData());
   const [industryData] = useState(getIndustryData());
   const [trendData] = useState(getTrendData());
@@ -387,6 +396,24 @@ export default function MarketInsights() {
         </TabsContent>
 
         {/* Trends - Atualizado com tendências de comunicação */}
+        <TabsContent value="trends" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Resumo Diário de Insights (11/11/2025)</CardTitle>
+              <CardDescription>
+                Análise e consolidação das tendências de comunicação e percepção mais recentes.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {isSummaryLoading && <p>Carregando resumo diário...</p>}
+              {isSummaryError && <p className="text-red-500">Erro ao carregar o resumo diário.</p>}
+              {dailySummary && (
+                <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{dailySummary}</ReactMarkdown>
+                </div>
+              )}
+            </CardContent>
+          </Card>
         <TabsContent value="trends" className="space-y-6">
           <Card>
             <CardHeader>
