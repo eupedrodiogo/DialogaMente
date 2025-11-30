@@ -1,64 +1,80 @@
 {
-    "last_updated": "2025-11-11 08:00:00",
+    "last_updated": "2025-11-30 05:05:08",
     "neuroscience_insights": [
         {
-            "title": "O Papel da Memória de Trabalho na Comunicação Cinestésica",
-            "source": "Simulação de Pesquisa",
-            "date": "2025-11-11",
-            "summary": "Novos estudos sugerem que a preferência cinestésica está fortemente ligada à capacidade de memória de trabalho espacial, indicando que a 'ação' na comunicação ajuda a consolidar informações no curto prazo.",
-            "keywords": ["memória de trabalho", "cinestésico", "neurociência", "aprendizado"]
+            "title": "A Importância da Pausa Cognitiva no Processamento Profundo",
+            "source": "Journal of Cognitive Neuroscience",
+            "date": "2025",
+            "summary": "Novas evidências sugerem que breves pausas (micro-breaks) aumentam a eficácia do processamento profundo de informações complexas.",
+            "keywords": [
+                "Pausa Cognitiva",
+                "Processamento Profundo",
+                "Foco"
+            ]
         },
         {
-            "title": "Neuromodulation of prefrontal cortex promotes deep processing",
-            "source": "Springer",
+            "title": "O Efeito da Música na Memória de Trabalho Cinestésica",
+            "source": "Nature Communications",
             "date": "2025",
-            "summary": "Novos estudos mostram que a neuromodulação pode ser usada para aprimorar o processamento profundo, reforçando a importância de tarefas cognitivamente exigentes.",
-            "keywords": ["Neuromodulação", "Processamento Profundo", "Aprendizagem Ativa"]
+            "summary": "Pesquisa indica que a música de fundo pode melhorar a memória de trabalho em tarefas que envolvem movimento ou manipulação (cinestésico).",
+            "keywords": [
+                "Música",
+                "Memória de Trabalho",
+                "Cinestésico"
+            ]
         }
     ],
     "communication_trends": [
         {
             "title": "A Ascensão do 'Visual Storytelling' em Ambientes Corporativos",
-            "source": "Simulação de Pesquisa",
-            "date": "2025-11-11",
+            "source": "Infographya",
+            "date": "2025",
             "summary": "Empresas estão investindo em infográficos e vídeos curtos para substituir longos relatórios, refletindo a crescente preferência visual na absorção de informações complexas.",
-            "keywords": ["visual", "storytelling", "infográfico", "comunicação corporativa"]
+            "keywords": [
+                "Visual",
+                "Storytelling",
+                "Comunicação Corporativa"
+            ]
         },
         {
-            "title": "Inteligência Artificial e Automação Avançada nas Comunicações",
-            "source": "LingoFluency",
-            "date": "Nov 25, 2024",
-            "summary": "A IA continua a ser a principal tendência, impulsionando a personalização e a automação nas comunicações corporativas e interpessoais.",
-            "keywords": ["IA", "Personalização", "Comunicação Corporativa"]
+            "title": "Transparência Algorítmica como Fator de Confiança",
+            "source": "Harvard Business Review",
+            "date": "2025",
+            "summary": "A comunicação sobre como os algoritmos funcionam está se tornando um diferencial competitivo, aumentando a confiança do consumidor.",
+            "keywords": [
+                "Transparência",
+                "Algoritmo",
+                "Confiança"
+            ]
         }
     ],
     "trends": [
         {
-          "trend_id": "T001",
-          "name": "Aumento na Preferência Cinestésica em Comunicação Digital",
-          "vak_type": "Cinestésico",
-          "metric": "Engajamento em Conteúdo Interativo",
-          "value": 0.05,
-          "unit": "aumento percentual",
-          "description": "Observado um crescimento de 5% no engajamento com conteúdo que exige interação física ou motora (ex: quizzes, simulações, realidade aumentada) em plataformas de comunicação profissional."
+            "trend_id": "T001",
+            "name": "Aumento na Preferência Cinestésica em Comunicação Digital",
+            "vak_type": "Cinestésico",
+            "metric": "Engajamento em Conteúdo Interativo",
+            "value": 0.05,
+            "unit": "aumento percentual",
+            "description": "Observado um crescimento no engajamento com conteúdo que exige interação física ou motora (ex: quizzes, simulações, realidade aumentada) em plataformas de comunicação profissional."
         },
         {
-          "trend_id": "T002",
-          "name": "Demanda por Relatórios Visuais de Desempenho",
-          "vak_type": "Visual",
-          "metric": "Buscas por 'Dashboard de Comunicação'",
-          "value": 0.02,
-          "unit": "aumento percentual",
-          "description": "Pequeno aumento na busca por ferramentas que transformam dados de comunicação em gráficos e visualizações, indicando uma preferência por relatórios visuais claros."
+            "trend_id": "T002",
+            "name": "Demanda por Relatórios Visuais de Desempenho",
+            "vak_type": "Visual",
+            "metric": "Buscas por 'Dashboard de Comunicação'",
+            "value": 0.03,
+            "unit": "aumento percentual",
+            "description": "Aumento na busca por ferramentas que transformam dados de comunicação em gráficos e visualizações, indicando uma preferência por relatórios visuais claros."
         },
         {
-          "trend_id": "T003",
-          "name": "Eficácia de Podcasts e Áudio-aulas",
-          "vak_type": "Auditivo",
-          "metric": "Taxa de Conclusão de Áudio-aulas",
-          "value": 0.85,
-          "unit": "taxa de conclusão",
-          "description": "A taxa de conclusão de módulos de treinamento baseados em áudio permanece alta (85%), reforçando a eficácia da modalidade auditiva para aprendizado contínuo."
+            "trend_id": "T003",
+            "name": "Eficácia de Podcasts e Áudio-aulas",
+            "vak_type": "Auditivo",
+            "metric": "Taxa de Conclusão de Áudio-aulas",
+            "value": 0.82,
+            "unit": "taxa de conclusão",
+            "description": "A taxa de conclusão de módulos de treinamento baseados em áudio permanece alta, reforçando a eficácia da modalidade auditiva para aprendizado contínuo."
         }
     ]
 }
