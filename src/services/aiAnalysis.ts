@@ -6,7 +6,7 @@
  * @description Fornece análises avançadas de perfil de comunicação usando IA
  */
 
-import OpenAI from 'openai';
+import OpenAI from 'openai';\nimport { preprocessTextForAI } from '../lib/dataPreprocessing';
 
 // Inicializar cliente OpenAI
 // No ambiente Node.js, a chave é lida automaticamente da variável de ambiente OPENAI_API_KEY.
@@ -338,20 +338,18 @@ export async function analyzeSentiment(text: string): Promise<{
         {
           role: 'system',
           content: 'Você é um especialista em análise de sentimento e emoções em texto.'
-        },
-        {
-          role: 'user',
-          content: `Analise o sentimento do seguinte texto e retorne em JSON:
-          
-          "${text}"
-          
-          Formato esperado:
-          {
-            "sentiment": "positive|neutral|negative",
-            "confidence": 0.85,
-            "emotions": ["lista de emoções detectadas"]
-          }`
-        }
+  content: `Analise o sentimento do seguinte texto e retorne em JSON:
+
+O texto já foi pré-processado para remover caracteres irrelevantes.
+
+Texto: "${preprocessTextForAI(text)}"
+
+Formato esperado:
+{
+  "sentiment": "positive|neutral|negative",
+  "confidence": 0.85,
+  "emotions": ["lista de emoções detectadas"]
+}`
       ],
       temperature: 0.3,
       max_tokens: 200
