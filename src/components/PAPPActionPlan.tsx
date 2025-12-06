@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import { PAPP_PROMPTS, CLT_PROMPT, VAK, MetacognitiveStage, Prompt } from '@/lib/pappPrompts';
 
 // Simulação de tipo de dados do resultado do teste VAK
 interface VAKResult {
@@ -22,28 +23,40 @@ async function fetchPAPP(vakResult: VAKResult): Promise<string[]> {
 
   console.log("Chamando Edge Function de IA com resultado VAK:", vakResult);
 
-  // Simulação de dados de retorno baseada na preferência dominante
-  const strategyMap = {
-    Visual: [
-      "Crie Mapas Mentais coloridos e diagramas para cada novo conceito.",
-      "Use a técnica de 'Palácio da Memória' (Memory Palace) para organizar informações visuais.",
-      "Transforme anotações em infográficos ou esboços visuais.",
-    ],
-    Auditivo: [
-      "Grave-se explicando o conteúdo em voz alta (Auto-explicação ativa).",
-      "Participe de debates e discussões para reforçar o aprendizado.",
-      "Use a técnica de 'Prática de Recuperação' (Retrieval Practice) falando sobre o tópico sem consultar anotações.",
-    ],
-    Cinestesico: [
-      "Desenvolva 'Experimentos de Pensamento' ou simulações práticas do conceito.",
-      "Use o método de 'Feynman' (ensinar o conceito a alguém) para reforçar o aprendizado ativo.",
-      "Caminhe ou use gestos enquanto estuda para incorporar o movimento ao pensamento.",
-    ],
-  };
+  // Simulação de dados de retorno baseada na preferência dominante e nos prompts metacognitivos
+  const dominantVAK = vakResult.dominant as VAK;
+  
+  // 1. Filtra os prompts específicos para a modalidade dominante
+  const dominantPrompts = PAPP_PROMPTS.filter(p => p.vak === dominantVAK);
+
+  // 2. Seleciona um prompt de cada estágio metacognitivo para a modalidade dominante
+  const selectedPrompts: Prompt[] = [];
+  const stages: MetacognitiveStage[] = ['Planejamento', 'Monitoramento', 'Reflexão'];
+
+  stages.forEach(stage => {
+    const promptForStage = dominantPrompts.find(p => p.stage === stage);
+    if (promptForStage) {
+      selectedPrompts.push(promptForStage);
+    }
+  });
+
+  // 3. Adiciona o prompt da Teoria da Carga Cognitiva (TCC)
+  selectedPrompts.push(CLT_PROMPT);
+
+  // 4. Adiciona 2 prompts genéricos de Processamento Profundo (simulando a IA)
+  const genericStrategies = [
+    { id: 'G001', text: "Auto-explicação: Explique o conceito para si mesmo como se estivesse ensinando a uma criança.", vak: dominantVAK, stage: 'Reflexão' as MetacognitiveStage },
+    { id: 'G002', text: "Elaboração: Conecte o novo conceito a algo que você já sabe. Qual é a analogia mais estranha que você consegue criar?", vak: dominantVAK, stage: 'Planejamento' as MetacognitiveStage },
+  ];
+  selectedPrompts.push(...genericStrategies);
+
+  // 5. Mapeia para o formato de retorno (apenas o texto do prompt)
+  const finalActionPlan = selectedPrompts.map(p => `[${p.stage}] ${p.text}`);
 
   await new Promise(resolve => setTimeout(resolve, 1500)); // Simula delay de rede/processamento
 
-  return strategyMap[vakResult.dominant];
+  return finalActionPlan;
+
 }
 
 interface PAPPActionPlanProps {
@@ -98,11 +111,16 @@ export function PAPPActionPlan({ vakResult }: PAPPActionPlanProps) {
 
         {actionPlan && (
           <ol className="space-y-4 list-decimal pl-5">
-            {actionPlan.map((step, index) => (
+            {actionPlan.map((step, index) => {
+              const [stage, ...rest] = step.split(']');
+              const text = rest.join(']').trim();
+              return (
               <li key={index} className="text-base font-medium">
-                {step}
+                <span className="font-bold text-purple-600 dark:text-purple-400">{stage.replace('[', '')}</span>: {text}
+                
               </li>
-            ))}
+            );
+            })}
           </ol>
         )}
       </CardContent>
