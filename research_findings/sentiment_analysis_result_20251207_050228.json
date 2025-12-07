@@ -1,0 +1,22 @@
+{
+    "sentiment": "positive",
+    "score": 0.7,
+    "intensity": "medium",
+    "keywords": [
+        "Inteligência Artificial",
+        "estratégias de comunicação",
+        "necessidade urgente",
+        "personalizar mensagens",
+        "automatizar atendimento",
+        "satisfação",
+        "retenção",
+        "ética",
+        "transparência algorítmica",
+        "confiança"
+    ],
+    "insights": "O texto destaca a importância e os benefícios da adoção da Inteligência Artificial nas comunicações corporativas, ressaltando ganhos em satisfação e retenção. Apesar disso, enfatiza a necessidade de atenção à ética e transparência para manter a confiança do público, equilibrando otimismo com cautela.",
+    "tone": "formal",
+    "confidence": 0.95,
+    "timestamp": "2025-12-07T05:02:28.868516",
+    "text_length": 435
+}

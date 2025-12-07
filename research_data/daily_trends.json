@@ -1,5 +1,5 @@
 {
-    "last_updated": "2025-11-30 05:05:08",
+    "last_updated": "2025-12-07 00:00:00",
     "neuroscience_insights": [
         {
             "title": "A Importância da Pausa Cognitiva no Processamento Profundo",
@@ -45,6 +45,17 @@
                 "Transparência",
                 "Algoritmo",
                 "Confiança"
+            ]
+        },
+        {
+            "title": "Aceleração da Mudança na Comunicação Empresarial pela IA",
+            "source": "Valor Econômico (Dino)",
+            "date": "2025",
+            "summary": "A inteligência artificial está alterando estruturas de trabalho e estimulando o surgimento de novas funções ligadas à automação e à gestão de comunicação, exigindo uma adaptação rápida das empresas.",
+            "keywords": [
+                "Inteligência Artificial",
+                "Comunicação Empresarial",
+                "Automação"
             ]
         }
     ],
