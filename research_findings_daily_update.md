@@ -92,3 +92,35 @@ O projeto, ao que parece, utiliza um teste de comunicação que se assemelha a u
 [7] GPTW. (2025). *Análise de perfil comportamental: 7 métodos para aplicar*.
 [8] Damásio, B. F., & Borsa, J. C. (2025). *Obra sobre testes psicológicos*. (Instagram)
 [9] Scielo. (s.d.). *Parâmetros psicométricos: uma análise de testes psicológicos comercializados no Brasil*.
+
+
+---
+# Atualização Diária - Pesquisa de Dados e Tendências (15/12/2025)
+
+## 1. Dados de Mercado Atualizados (Testes Pré-Emprego e Psicometria)
+
+- **Mercado de Software de Teste Pré-Emprego Global:**
+    - Avaliado em **US$ 195,52 milhões em 2024**, com projeção de crescimento para **US$ 485,1 milhões** (Fonte: Market Growth Reports).
+    - Outra fonte estima o mercado em **US$ 1.970,56 milhões em 2025**, com projeção de atingir **US$ 3.395,92 milhões até 2033** (CAGR de 7,04%) (Fonte: Global Growth Insights).
+- **Mercado Global de Soluções em Psicometria Digital:**
+    - Projeção de ultrapassar a marca de **US$ 5 bilhões de dólares até 2025** (Fonte: Psico-Smart, citando relatório).
+
+## 2. Base Científica (Modelo VAK)
+
+- **Controvérsia Científica:** O modelo VAK (Visual, Auditivo, Cinestésico) é amplamente utilizado, mas a ciência cognitiva moderna sugere que a **memória e o aprendizado são mais baseados no significado** do que na modalidade sensorial (Daniel T. Willingham).
+- **Implicação para o Projeto:** A reestruturação teórica do projeto, mudando o foco de "Estilo de Aprendizagem" para "Preferência de Comunicação/Memória" e adicionando ressalvas científicas, é **crucial para a credibilidade**.
+
+## 3. Tendências de Comunicação Corporativa (2026)
+
+- **Inteligência Artificial (IA):** A IA é a tendência dominante, atuando como **parceira** na comunicação, e já é usada por mais de 40% das empresas brasileiras em marketing e conteúdo. A tendência é a integração de IA conversacional.
+- **Foco na Qualidade:** Priorização de **mais qualidade e menos quantidade** de conteúdo.
+- **Integração e Omnichannel:** Comunicação integrada, com foco em **Omnichannel** e **mobilidade**.
+- **Humanização e Propósito:** A comunicação corporativa de 2026 será marcada pela integração entre tecnologia e **humanização**, com foco em **propósito e transparência**.
+- **Memórias Partilhadas:** Criação de experiências e narrativas que geram **memórias partilhadas**.
+
+## 4. Recursos Avançados a Implementar (Baseado nas Tendências)
+
+1.  **AI Communication Coach:** Reforçar a implementação do treinador pessoal de comunicação baseado em IA.
+2.  **Conteúdo Dinâmico e de Qualidade:** Focar na geração de conteúdo personalizado e de alta qualidade, alinhado com a tendência de "mais qualidade e menos quantidade".
+3.  **Integração de Dados em Tempo Real:** Utilizar os dados de mercado e tendências para atualizar o Dashboard de Estatísticas em Tempo Real.
+4.  **Revisão da Documentação Científica:** Garantir que a documentação sobre o VAK e a nova abordagem baseada em significado esteja clara e acessível.
